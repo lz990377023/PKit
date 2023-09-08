@@ -15,7 +15,6 @@ func products() -> [Product] {
 
 
 func targets() -> [Target] {
-    
     var targets: [Target] = [
         .target(name: "PKCore", path: "Sources/Core"),
         .target(
@@ -44,6 +43,7 @@ func targets() -> [Target] {
                     dependencies: ["PKCore", "PKWebServer"]),
         .target(name: "PKUI", path: "Sources/UI")
     ]
+    
     return targets
 }
 

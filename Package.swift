@@ -7,7 +7,7 @@ func products() -> [Product] {
     var products: [Product] = [
         .library(name: "PKCore", targets: ["PKCore"]),
         .library(name: "PKWebServer", targets: ["PKWebServer"]),
-        .library(name: "PKJSON", targets: ["PKJSON"])
+        .library(name: "PKJSON", targets: ["PKJSON"]),
         .library(name: "PKUI", targets: ["PKUI"])
     ]
     return products
@@ -41,13 +41,9 @@ func targets() -> [Target] {
                         "PKJSON",
                     ]),
         .testTarget(name: "WebServerTests",
-                    dependencies: ["PKCore", "PKWebServer"])
+                    dependencies: ["PKCore", "PKWebServer"]),
+        .target(name: "PKUI", path: "Sources/UI")
     ]
-    
-#if os(iOS)
-    targets.append(.target(name: "PKUI", path: "Sources/UI"))
-#endif
-    
     return targets
 }
 

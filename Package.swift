@@ -8,12 +8,8 @@ func products() -> [Product] {
         .library(name: "PKCore", targets: ["PKCore"]),
         .library(name: "PKWebServer", targets: ["PKWebServer"]),
         .library(name: "PKJSON", targets: ["PKJSON"])
+        .library(name: "PKUI", targets: ["PKUI"])
     ]
-    
-#if os(iOS)
-    products.append(.library(name: "PKUI", targets: ["PKUI"]))
-#endif
-    
     return products
 }
 
